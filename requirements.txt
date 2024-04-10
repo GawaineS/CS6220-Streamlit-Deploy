@@ -1,4 +1,4 @@
 joblib
 pandas
-matplotlib.pyplot
+matplotlib
 numpy
