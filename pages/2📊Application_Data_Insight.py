@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import joblib
-import seaborn as sns
 
 st.title('PERM Application Data Visualization')
 df = joblib.load('./data/dataframe.joblib')
