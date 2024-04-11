@@ -30,8 +30,6 @@ def find_user_input(file, item, emoji):
     options  = load_options(file)
     search_term = st.text_input(emoji + "**Input keywords to search your " + item + ".**")
     filtered_options = [option for option in options if search_term.lower() in option.lower()]
-    if len(filtered_options) > 50:
-        filtered_options = filtered_options[:50]
     filtered_options.append("Others")
     return st.selectbox(emoji + "**Select a " + item + ". Choose \"Other\" if it is not on the list.**", filtered_options)
 
