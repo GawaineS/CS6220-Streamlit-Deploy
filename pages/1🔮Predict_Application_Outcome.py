@@ -25,13 +25,13 @@ def load_options(file):
         options = [option.strip() for option in options]
     return options
 
-# Autocomplete selectbox simulation
 def find_user_input(file, item, emoji):
     options  = load_options(file)
-    search_term = st.text_input(emoji + "**Input keywords to search your " + item + ".**")
-    filtered_options = [option for option in options if search_term.lower() in option.lower()]
-    filtered_options.append("Others")
-    return st.selectbox(emoji + "**Select a " + item + ". Choose \"Other\" if it is not on the list.**", filtered_options)
+    # search_term = st.text_input(emoji + "**Input keywords to search your " + item + ".**")
+    # filtered_options = [option for option in options if search_term.lower() in option.lower()]
+    # filtered_options.append("Others")
+    options.append("Others")
+    return st.selectbox(emoji + "**Select a " + item + ". Choose \"Other\" if it is not on the list.**", options)
 
 # Loading images
 pass_img = Image.open('./image/pass.jpg')
