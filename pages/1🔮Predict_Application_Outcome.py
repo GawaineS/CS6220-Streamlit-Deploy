@@ -45,7 +45,7 @@ parameter_list=["employer" , "education_level" ,"citizenship", "class_of_admissi
                 "agent_firm" , "job_title" , "experience_level" , "wage_level" ]
 wage_level_list = ['Level 1: Below 50K', 'Level 2: 50K-75K', 'Level 3: 75K-100K', 'Level 4: 100K-150K','Level 5: Above 150K']
 education_list = ['High School', "Associate's", "Bachelor's", "Master's", 'Doctorate', 'Other']
-experience_list = ['Level 1: 0-12 months', 'Level 3: 37-60 months', 'Level 2: 13-36 months', 'Level 4: 61-120 months', 'Level 5: 121+ months']
+experience_list = ['Level 1: 0-12 months', 'Level 2: 13-36 months', 'Level 3: 37-60 months', 'Level 4: 61-120 months', 'Level 5: 121+ months']
 parameter_input_values.append(find_user_input("employer", "Employer", ":office:"))
 parameter_input_values.append(find_user_input("citizenship", "citizenship", ":earth_asia:"))
 parameter_input_values.append(find_user_input("class_of_admission", "Class of Admission", ":passport_control:"))
