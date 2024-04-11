@@ -64,7 +64,7 @@ for column in input_variables:
 # Button that triggers the actual prediction
 if st.button("***Click Here to Predict you Application Result***"):
     prediction = model.predict(input_variables)
-    if prediction == 0:
+    if prediction == 1:
         st.image(pass_img)
     else:
         st.image(fail_img)
