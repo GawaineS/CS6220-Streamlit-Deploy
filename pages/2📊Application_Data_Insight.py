@@ -58,7 +58,7 @@ def write_result(column, selection):
     choice = st.selectbox("**Select your " + selection + ".**", options)
     certified = len(certified_cases[certified_cases[column] == choice])
     denied = len(denied_cases[denied_cases[column] == choice])
-    st.markdown("### Number of Certified Cases: " str(certified))
+    st.markdown("### Number of Certified Cases: " + str(certified))
     st.markdown("### Number of Denied Cases: " + str(denied))
     st.markdown("### Certificate Rate: " + str(certified / (denied + certified)))
 
