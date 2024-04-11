@@ -31,7 +31,7 @@ def find_user_input(file, item, emoji):
     # filtered_options = [option for option in options if search_term.lower() in option.lower()]
     # filtered_options.append("Others")
     options.append("Others")
-    return st.selectbox(emoji + "**Select a " + item + ". Choose \"Other\" if it is not on the list.**", options)
+    return st.selectbox(emoji + "**Select a " + item + ". Choose the closest one if your option is not on the list.**", options)
 
 # Loading images
 pass_img = Image.open('./image/pass.jpg')
