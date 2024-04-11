@@ -39,6 +39,12 @@ def draw_distribution(title, column):
     plt.ylabel('')
     draw_graph_title(title)
 
+def write_result(column):
+    st.write(column)
+    st.write("Number of Certified Cases: ", 0)
+    st.write("Number of Denied Cases: ", 0)
+    st.write("Certificate Rate: ", 0)
+
 features_1 = ["Employer", "Citizenship", "Class of Admission", "Agent Firm" , "Job Title"]
 columns_1 = ["employer", "citizenship", "class_of_admission", "agent_firm" , "job_title"]
 features_2 = ["Education Level", "Experience Level", "Wage Level"]
@@ -53,7 +59,10 @@ if selection in features_1:
     draw_top("Top 10 " + selection + " by Number of Certified Cases", column, certified_cases, "Number of Certified Applications", "orange")
     draw_top("Top 10 " + selection + " by Number of Denied Cases", column, denied_cases, "Number of Denied Applications", '#1f77b4')
     draw_rate("Bottom 10 " + selection + " by Cerfication Rate", column)
+    write_result(column)
 else:
     column = columns_2[features_2.index(selection)]
     draw_distribution("Percentage of Certified Applications by " + selection, column)
     draw_rate("Certified Rate Rank", column)
+    write_result(column)
+
