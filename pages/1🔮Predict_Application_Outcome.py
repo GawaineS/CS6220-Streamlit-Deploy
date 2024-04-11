@@ -18,19 +18,10 @@ encoders = joblib.load('./data/label_encoders.joblib')
 st.title("PERM Application Prediction")
 st.markdown("## Applicant's Information")
 
-# Load options from files
-def load_options(file):
+def find_user_input(file, item, emoji):
     with open('./data/' + file + '.txt', 'r') as file:
         options = file.readlines()
         options = [option.strip() for option in options]
-    return options
-
-def find_user_input(file, item, emoji):
-    options  = load_options(file)
-    # search_term = st.text_input(emoji + "**Input keywords to search your " + item + ".**")
-    # filtered_options = [option for option in options if search_term.lower() in option.lower()]
-    # filtered_options.append("Others")
-    options.append("Others")
     return st.selectbox(emoji + "**Select a " + item + ". Choose the closest one if your option is not on the list.**", options)
 
 # Loading images
