@@ -60,7 +60,7 @@ def write_result(column, selection):
     denied = len(denied_cases[denied_cases[column] == choice])
     st.markdown("### Number of Certified Cases: " + str(certified))
     st.markdown("### Number of Denied Cases: " + str(denied))
-    st.markdown("### Certificate Rate: " + str(certified / (denied + certified)))
+    st.markdown("### Certificate Rate: " + str(100.0 * certified / (denied + certified)) + "%")
 
 selection = st.sidebar.radio("Select a Feature for Visualization", features_1 + features_2)
 
